@@ -12,7 +12,8 @@ const Cards = ({ classes }) => {
       <CardContent>
         <Typography>{t('OUR_CARD')}</Typography>
       </CardContent>
-    </Card>);
+    </Card>
+  );
 };
 
 export default withStyles(styles)(Cards);
