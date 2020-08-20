@@ -1,8 +1,13 @@
 const styles = {
   CardContainer: {
-    height: '320px',
-    width: '190px'
-  }
+    height: '280px',
+    width: '190px',
+    padding: '0 5px'
+  },
+  media: {
+    height: 0,
+    paddingTop: '56.25%'
+  },
 };
 
 export default styles;
