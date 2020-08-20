@@ -10,21 +10,7 @@ import { withStyles } from '@material-ui/core/styles';
 
 import styles from './styles';
 
-const infoCard = {
-  name: 'Brazil',
-  nativeName: "Brasil",
-  officialLanguages: [
-    {
-      name: "Portuguese",
-      nativeName: "Português"
-    }
-  ],
-  flag: {
-    svgFile: "https://restcountries.eu/data/bra.svg"
-  },
-};
-
-const Cards = ({ classes }) => {
+const Cards = ({ classes, infoCard }) => {
   return (
     <Card variant="outlined" className={classes.CardContainer}>
       <CardHeader
