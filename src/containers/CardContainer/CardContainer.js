@@ -4,48 +4,6 @@ import { GET_COUNTRYS } from 'services/querys';
 import Card from './Cards';
 import { withStyles } from '@material-ui/core/styles';
 
-const infoCard = [
-  {
-    name: 'Brazil',
-    nativeName: "Brasil",
-    officialLanguages: [
-      {
-        name: "Portuguese",
-        nativeName: "Português"
-      }
-    ],
-    flag: {
-      svgFile: "https://restcountries.eu/data/bra.svg"
-    },
-  },
-  {
-    name: 'Brazil',
-    nativeName: "Brasil",
-    officialLanguages: [
-      {
-        name: "Portuguese",
-        nativeName: "Português"
-      }
-    ],
-    flag: {
-      svgFile: "https://restcountries.eu/data/bra.svg"
-    },
-  },
-  {
-    name: 'Brazil',
-    nativeName: "Brasil",
-    officialLanguages: [
-      {
-        name: "Portuguese",
-        nativeName: "Português"
-      }
-    ],
-    flag: {
-      svgFile: "https://restcountries.eu/data/bra.svg"
-    },
-  }
-];
-
 const styles = {
   container: {
     display: 'flex'
@@ -53,17 +11,18 @@ const styles = {
 };
 
 const CardContainer = ({ classes }) => {
-  const { data } = useQuery(GET_COUNTRYS);
-
+  const { data, loading } = useQuery(GET_COUNTRYS);
+  console.log('data', data, loading);
   useEffect(() => {
     if (data) {
-      console.log('data', data);
+      console.log('data', data, loading);
     }
   }, [data]);
 
   return (
     <div className={classes.container}>
-      {infoCard.map(e => <Card infoCard={e} data={data} />)}
+      {!loading &&
+        data.Country.map(e => <Card infoCard={e} data={data} />)}
     </div>
   );
 };
