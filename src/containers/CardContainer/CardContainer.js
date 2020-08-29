@@ -2,6 +2,7 @@ import React from 'react';
 import { useQuery } from '@apollo/client';
 import { GET_COUNTRYS } from 'services/querys';
 import Card from './Cards';
+import { Grid } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = {
@@ -15,8 +16,14 @@ const CardContainer = ({ classes }) => {
 
   return (
     <div className={classes.container}>
-      {!loading &&
-        data.Country.map(e => <Card infoCard={e} />)}
+      <Grid container spacing={3}>
+        {!loading &&
+          data.Country.map(e =>
+            <Grid item xs>
+              <Card infoCard={e} />
+            </Grid>
+          )}
+      </Grid>
     </div>
   );
 };
