@@ -12,7 +12,8 @@ const PanelContainer = ({ classes }) => {
     <div className={classes.container}>
       <Header />
       <CardContainer />
-    </div>);
+    </div>
+  );
 };
 
 export default withStyles(styles)(PanelContainer);
