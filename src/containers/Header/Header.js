@@ -1,15 +1,15 @@
 import React from 'react';
+
+import { useTranslation } from 'react-i18next';
+
 import { withStyles } from '@material-ui/core/styles';
 import {
   AppBar,
   Toolbar,
   Typography,
-  TextField,
-  InputAdornment
 } from '@material-ui/core';
-import { Search } from '@material-ui/icons';
 
-import { useTranslation } from 'react-i18next';
+import Input from 'components/Input';
 
 import styles from './styles';
 
@@ -20,23 +20,14 @@ const Header = ({ classes }) => {
     <div className={classes.appBar}>
       <AppBar position="static" >
         <Toolbar>
-          <Typography variant="h6" noWrap>
+          <Typography variant="h4" noWrap>
             {t('WDIGO')}
           </Typography>
-          <TextField
-            className={classes.search}
-            label="Search"
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">
-                  <Search style={{ color: 'white' }} />
-                </InputAdornment>
-              ),
-            }}
-          />
+          <Input />
         </Toolbar>
       </AppBar>
-    </div>);
+    </div>
+  );
 };
 
 export default withStyles(styles)(Header);

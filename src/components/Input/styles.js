@@ -1,7 +1,4 @@
 const styles = {
-  appBar: {
-    flexGrow: 1,
-  },
   search: {
     borderColor: 'white',
     borderRadius: '8px',
