@@ -23,7 +23,7 @@ const Header = ({ classes }) => {
           <Typography variant="h4" noWrap>
             {t('WDIGO')}
           </Typography>
-          <Input />
+          <Input search={true} />
         </Toolbar>
       </AppBar>
     </div>
