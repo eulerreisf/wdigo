@@ -13,7 +13,7 @@ import Input from 'components/Input';
 
 import styles from './styles';
 
-const Header = ({ classes }) => {
+const Header = ({ classes, onSearch }) => {
   const { t } = useTranslation();
 
   return (
@@ -23,7 +23,7 @@ const Header = ({ classes }) => {
           <Typography variant="h4" noWrap>
             {t('WDIGO')}
           </Typography>
-          <Input />
+          <Input search={true} onSearch={onSearch} />
         </Toolbar>
       </AppBar>
     </div>
