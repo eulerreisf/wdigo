@@ -1,8 +1,8 @@
 import { gql } from '@apollo/client';
 
 export const GET_COUNTRYS = gql`
-query {
-  Country {
+query getCountrys($name: String) {
+  Country(filter: {name: $name}) {
     name
     nativeName
     alpha2Code
