@@ -4,12 +4,7 @@ import { GET_COUNTRYS } from 'services/querys';
 import Card from './Cards';
 import { Grid } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
-
-const styles = {
-  container: {
-    display: 'flex'
-  }
-};
+import { styles } from './CardContainer.styles';
 
 const CardContainer = ({ classes }) => {
   const { data, loading } = useQuery(GET_COUNTRYS);
