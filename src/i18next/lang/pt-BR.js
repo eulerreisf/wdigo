@@ -1,7 +1,7 @@
 const translation = {
   OUR_CARD: "Nossos Cards",
   WDIGO: "Wdigo",
-  SEARCH: "Search"
+  SEARCH: "Buscar"
 };
 
 export default { translation };

@@ -3,10 +3,12 @@ import React, { useState } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 
 import { useQuery } from '@apollo/client';
+
 import { GET_COUNTRIES } from 'services/querys';
 
 import Header from 'containers/Header';
-import CardContainer from '../CardContainer';
+import CardContainer from 'containers/CardContainer';
+
 import styles from './styles';
 
 const PanelContainer = ({ classes }) => {
